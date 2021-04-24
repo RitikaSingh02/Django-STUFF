@@ -23,3 +23,7 @@ class PizzaForm(forms.ModelForm):
         fields = ['topping1', 'topping2', 'topping3', 'size']
         labels = {'topping1': "TOPPING 1"}
         # changes the label for field 'toppping1' to TOPPING 1
+
+
+class MultiplePizzaform(forms.Form):
+    number = forms.IntegerField(min_value=2, max_value=4)
