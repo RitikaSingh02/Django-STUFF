@@ -1,6 +1,13 @@
 <h1> Order a pizza</h1>
 
 <h2>{{note}}</h2>
+
+{% if created_pizza_id %}
+
+<a href = "{% url 'edit_order' created_pizza_id%}">EDIT YOUR ORDER </a>
+
+{%endif%}
+
 <form enctype="multipart/form-data" action="{%url 'order'%}" method="post">
     <!-- <label for = "topping1">TOPPING 1 :</label>
     <input id = "topping1" type = "text" name="topping1"> 
